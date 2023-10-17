@@ -1,21 +1,23 @@
 package com.jorge;
 
-import javax.swing.*;
+import java.util.InputMismatchException;
+import java.util.Scanner;
 
-public class Exercise1 {
+public class ExerciseScanner {
 
     public static void main(String[] args) {
         int numeroEntero = 0;
         int numeroOctal;
-        Long numeroBinario;
+        long numeroBinario;
         String numeroString;
+        Scanner scanner = new Scanner(System.in);
 
-        numeroString = JOptionPane.showInputDialog("Introduce un número entero: ");
+        System.out.println("Introduce un número entero: ");
 
         try {
-            numeroEntero = Integer.parseInt(numeroString);
-        } catch (NumberFormatException e) {
-            JOptionPane.showMessageDialog(null, "El número introducido no es válido");
+            numeroEntero = scanner.nextInt();
+        } catch (InputMismatchException e) {
+            System.out.println("El carácter introducido no es válido");
             main(args);
             System.exit(0);
         }
@@ -32,8 +34,7 @@ public class Exercise1 {
                 + "\n" + mensajeOctal
                 + "\n" + mensajeBinario;
 
-        JOptionPane.showMessageDialog(null, mensaje);
-
+        System.out.println(mensaje);
 
     }
 }

@@ -30,15 +30,15 @@ public class EstanqueDeGasolina {
 
         if (gas == 70 ){
             System.out.println("Estanque lleno");
-        } else if (gas >= 60 && gas < 70){
+        } else if (gas >= 60){
             System.out.println("Estanque casi lleno");
-        } else if (gas >= 40 && gas < 60){
+        } else if (gas >= 40){
             System.out.println("Estanque 3/4");
-        } else if (gas >= 35 && gas < 40){
+        } else if (gas >= 35){
             System.out.println("Medio estanque");
-        } else if (gas >= 20 && gas < 35){
+        } else if (gas >= 20){
             System.out.println("Gas Suficiente");
-        } else if (gas >= 1 && gas < 20){
+        } else if (gas >= 1){
             System.out.println("Gas Insuficiente");
         } else{
             System.out.println("Estanque vacío");

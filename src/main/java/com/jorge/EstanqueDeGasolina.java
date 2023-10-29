@@ -17,8 +17,16 @@ public class EstanqueDeGasolina {
     public static void main(String[] args) {
 
         Scanner keyboard = new Scanner(System.in);
-        System.out.println("Introduce la cantidad de gasolina en el estanque: ");
-        double gas = keyboard.nextDouble();
+        double gas = -1;
+
+        while (gas > 70 || gas < 0){
+            System.out.println("Introduce la cantidad de gasolina en el estanque: ");
+            gas = keyboard.nextDouble();
+
+            if (gas > 70 || gas < 0) {
+                System.out.println("La cantidad de gasolina no puede ser negativa ni mayor a 70");
+            }
+        }
 
         if (gas == 70 ){
             System.out.println("Estanque lleno");
@@ -32,13 +40,8 @@ public class EstanqueDeGasolina {
             System.out.println("Gas Suficiente");
         } else if (gas >= 1 && gas < 20){
             System.out.println("Gas Insuficiente");
-        } else if (gas == 0) {
+        } else{
             System.out.println("Estanque vacío");
-        } else {
-            do {
-                System.out.println("La cantidad de gasolina no puede ser negativa ni mayor a 70");
-                main(args);
-            } while (gas < 0 || gas > 70);
         }
     }
 }

@@ -22,7 +22,6 @@ public class CalculateAge {
         }
 
         Date fechaActual = new Date();
-
         long diff = fechaActual.getTime() - date.getTime();
         long diffDays = diff / (24 * 60 * 60 * 1000);
         long diffYears = diffDays / 365;
